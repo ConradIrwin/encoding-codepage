@@ -37,13 +37,21 @@ For seeing whether code-pages exist:
     Encoding.codepage?(37)
     # => nil
 
-Also makes all supported Code Pages available with a `CP` prefix:
+It also makes all supported Code Pages available as object with a `CP` prefix:
 
     Encoding::CP28591
     # => #<Encoding:CP28591>
 
     Encoding.find("CP28591")
     # => #<Encoding:CP28591>
+
+And adds a method to `Encoding` objects for discovering their Code Page Identifier:
+
+    Encoding::UTF_8.codepage_id
+    # => 65001
+
+    Encoding::ISO_8859_1.codepage_id
+    # => 28591
 
 Encodings
 =========

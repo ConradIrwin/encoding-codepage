@@ -54,8 +54,10 @@ class Encoding
         number, original, comment = line.split("\t", 3)
         number = Integer(number, 10)
 
-        if !codepage?(number) && exist?(original.upcase)
-          Encoding.find(original.upcase).replicate "CP#{number}"
+        if encoding = exist?(original.upcase)
+          encoding.replicate "CP#{number}" unless codepage?(number)
+
+          CodePage.reverse_lookup[encoding] = codepage(number)
         end
       }
     end
@@ -63,8 +65,34 @@ class Encoding
     def codepage_file
       File.join(File.dirname(__FILE__), "codepages.tsv")
     end
+
+    # A Hash from <non-codepage-encoding> to <codepage-encoding> to facilitate running
+    # codepage_id in the case where Ruby has both the CodePage encoding and its alias, but
+    # thinks they are different Encodings.
+    #
+    def self.reverse_lookup
+      @reverse_lookup ||= {}
+    end
+  end
+
+  module CodePageMethods
+    # Find the code-page id that corresponds to this encoding.
+    #
+    # @return Integer       The Code Page Identifier
+    # @raise  ArgumentError There is no Code Page Identifier for that Encoding.
+    #
+    def codepage_id
+      if names.detect{ |x| x =~ /\ACP([0-9]+)\z/ }
+        Integer($1, 10)
+      elsif codepage_encoding = CodePage.reverse_lookup[self]
+        codepage_encoding.codepage_id
+      else
+        raise ArgumentError, "No Code Page Idenfier found for: #{self}"
+      end
+    end
   end
 
   extend CodePage
+  include CodePageMethods
   load_codepages!
 end
