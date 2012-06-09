@@ -78,7 +78,8 @@ After installing this gem, you'll be able to access the following Code Pages fro
     CP936   => GB2312         # ANSI/OEM Simplified Chinese (PRC, Singapore); Chinese Simplified (GB2312)
     CP949   => KS_C_5601-1987 # ANSI/OEM Korean (Unified Hangul Code)
     CP950   => BIG5           # ANSI/OEM Traditional Chinese (Taiwan; Hong Kong SAR, PRC); Chinese Traditional (Big5)
-    CP1200  => UTF-16         # Unicode UTF-16, little endian byte order (BMP of ISO 10646); available only to managed applications
+    CP1200  => UTF-16LE       # Unicode UTF-16, little endian byte order (BMP of ISO 10646); available only to managed applications
+    CP1201  => UTF-16BE       # Unicode UTF-16, big endian byte order; available only to managed applications
     CP1250  => WINDOWS-1250   # ANSI Central European; Central European (Windows)
     CP1251  => WINDOWS-1251   # ANSI Cyrillic; Cyrillic (Windows)
     CP1252  => WINDOWS-1252   # ANSI Latin 1; Western European (Windows)
@@ -138,7 +139,6 @@ The following code pages are known not to be supported:
     CP1147  => IBM01147                # IBM EBCDIC France (20297 + Euro symbol); IBM EBCDIC (France-Euro)
     CP1148  => IBM01148                # IBM EBCDIC International (500 + Euro symbol); IBM EBCDIC (International-Euro)
     CP1149  => IBM01149                # IBM EBCDIC Icelandic (20871 + Euro symbol); IBM EBCDIC (Icelandic-Euro)
-    CP1201  => UNICODEFFFE             # Unicode UTF-16, big endian byte order; available only to managed applications
     CP1361  => JOHAB                   # Korean (Johab)
     CP10000 => MACINTOSH               # MAC Roman; Western European (Mac)
     CP10001 => X-MAC-JAPANESE          # Japanese (Mac)

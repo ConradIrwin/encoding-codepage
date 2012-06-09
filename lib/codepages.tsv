@@ -41,8 +41,8 @@
 1147	IBM01147	IBM EBCDIC France (20297 + Euro symbol); IBM EBCDIC (France-Euro)
 1148	IBM01148	IBM EBCDIC International (500 + Euro symbol); IBM EBCDIC (International-Euro)
 1149	IBM01149	IBM EBCDIC Icelandic (20871 + Euro symbol); IBM EBCDIC (Icelandic-Euro)
-1200	utf-16	Unicode UTF-16, little endian byte order (BMP of ISO 10646); available only to managed applications
-1201	unicodeFFFE	Unicode UTF-16, big endian byte order; available only to managed applications
+1200	utf-16LE	Unicode UTF-16, little endian byte order (BMP of ISO 10646); available only to managed applications
+1201	utf-16BE	Unicode UTF-16, big endian byte order; available only to managed applications
 1250	windows-1250	ANSI Central European; Central European (Windows)
 1251	windows-1251	ANSI Cyrillic; Cyrillic (Windows)
 1252	windows-1252	ANSI Latin 1; Western European (Windows)
