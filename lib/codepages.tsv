@@ -69,7 +69,7 @@
 10079	x-mac-icelandic	Icelandic (Mac)
 10081	x-mac-turkish	Turkish (Mac)
 10082	x-mac-croatian	Croatian (Mac)
-12000	utf-32	Unicode UTF-32, little endian byte order; available only to managed applications
+12000	utf-32LE	Unicode UTF-32, little endian byte order; available only to managed applications
 12001	utf-32BE	Unicode UTF-32, big endian byte order; available only to managed applications
 20000	x-Chinese_CNS	CNS Taiwan; Chinese Traditional (CNS)
 20001	x-cp20001	TCA Taiwan

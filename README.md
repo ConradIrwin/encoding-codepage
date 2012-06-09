@@ -89,7 +89,7 @@ After installing this gem, you'll be able to access the following Code Pages fro
     CP1256  => WINDOWS-1256   # ANSI Arabic; Arabic (Windows)
     CP1257  => WINDOWS-1257   # ANSI Baltic; Baltic (Windows)
     CP1258  => WINDOWS-1258   # ANSI/OEM Vietnamese; Vietnamese (Windows)
-    CP12000 => UTF-32         # Unicode UTF-32, little endian byte order; available only to managed applications
+    CP12000 => UTF-32LE       # Unicode UTF-32, little endian byte order; available only to managed applications
     CP12001 => UTF-32BE       # Unicode UTF-32, big endian byte order; available only to managed applications
     CP20127 => US-ASCII       # US-ASCII (7-bit)
     CP20866 => KOI8-R         # Russian (KOI8-R); Cyrillic (KOI8-R)
@@ -106,14 +106,10 @@ After installing this gem, you'll be able to access the following Code Pages fro
     CP28599 => ISO-8859-9     # ISO 8859-9 Turkish
     CP28603 => ISO-8859-13    # ISO 8859-13 Estonian
     CP28605 => ISO-8859-15    # ISO 8859-15 Latin 9
-    CP50220 => ISO-2022-JP    # ISO 2022 Japanese with no halfwidth Katakana; Japanese (JIS)
-    CP50221 => CSISO2022JP    # ISO 2022 Japanese with halfwidth Katakana; Japanese (JIS-Allow 1 byte Kana)
-    CP50222 => ISO-2022-JP    # ISO 2022 Japanese JIS X 0201-1989; Japanese (JIS-Allow 1 byte Kana - SO/SI)
     CP51932 => EUC-JP         # EUC Japanese
     CP51936 => EUC-CN         # EUC Simplified Chinese; Chinese Simplified (EUC)
     CP51949 => EUC-KR         # EUC Korean
     CP54936 => GB18030        # Windows XP and later: GB18030 Simplified Chinese (4 byte); Chinese Simplified (GB18030)
-    CP65000 => UTF-7          # Unicode (UTF-7)
     CP65001 => UTF-8          # Unicode (UTF-8)
 
 The following code pages are known not to be supported:
@@ -191,6 +187,9 @@ The following code pages are known not to be supported:
     CP21027 =>                         # (deprecated)
     CP29001 => X-EUROPA                # Europa 3
     CP38598 => ISO-8859-8-I            # ISO 8859-8 Hebrew; Hebrew (ISO-Logical)
+    CP50220 => ISO-2022-JP             # ISO 2022 Japanese with no halfwidth Katakana; Japanese (JIS)
+    CP50221 => CSISO2022JP             # ISO 2022 Japanese with halfwidth Katakana; Japanese (JIS-Allow 1 byte Kana)
+    CP50222 => ISO-2022-JP             # ISO 2022 Japanese JIS X 0201-1989; Japanese (JIS-Allow 1 byte Kana - SO/SI)
     CP50225 => ISO-2022-KR             # ISO 2022 Korean
     CP50227 => X-CP50227               # ISO 2022 Simplified Chinese; Chinese Simplified (ISO 2022)
     CP50229 =>                         # ISO 2022 Traditional Chinese
@@ -213,6 +212,7 @@ The following code pages are known not to be supported:
     CP57009 => X-ISCII-MA              # ISCII Malayalam
     CP57010 => X-ISCII-GU              # ISCII Gujarati
     CP57011 => X-ISCII-PA              # ISCII Punjabi
+    CP65000 => UTF-7                   # Unicode (UTF-7)
 
 Original list from: http://msdn.microsoft.com/en-us/library/dd317756(VS.85).aspx
 

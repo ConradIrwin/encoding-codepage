@@ -54,7 +54,7 @@ class Encoding
         number, original, comment = line.split("\t", 3)
         number = Integer(number, 10)
 
-        if encoding = exist?(original.upcase)
+        if encoding = exist?(original.upcase) && !encoding.dummy?
           encoding.replicate "CP#{number}" unless codepage?(number)
 
           CodePage.reverse_lookup[encoding] = codepage(number)
